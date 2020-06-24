@@ -20,8 +20,8 @@ struct ContentView: View {
                         CarRow(car: car)
                     }
                 }
-            }.padding([.top, .bottom], 10)
-                .navigationBarTitle(Text("Каталог авто"))
+            }
+            .navigationBarTitle(Text("Каталог авто"))
         }
     }
 }
@@ -29,7 +29,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone 8", "iPhone Xs Max"], id: \.self) { deviceName in
-            CarDetailView(car: carData[0])
+            ContentView()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }
